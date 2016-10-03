@@ -1,0 +1,16 @@
+.weatherItems {
+  list-style-type: none;
+}
+
+.weatherItems li {
+  cursor: pointer;
+  background-color: #5578AC;
+  color: white;
+}
+
+.weatherItems li:hover {
+  color: white;
+  background-color: #40628E;
+  left: .1em;
+
+}

@@ -1,0 +1,30 @@
+.weatherDetailItems {
+  list-style-type: none;
+}
+
+.weatherDetailItems li {
+  background-color: #5578AC;
+  color: white;
+}
+
+.map-box {
+  height: 100px;
+  min-width: 100px;
+  box-shadow: 1px 1px 6px #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}

@@ -1,0 +1,13 @@
+<div>
+  <ul class="weatherItems">
+    <li *ngFor="let weatherItem of weatherItems" class="box" (click)="gotoDetail(weatherItem)">
+      <div class="col-1">
+        <h3>{{weatherItem.name}}</h3>
+        <p class="info">{{weatherItem.weather[0].description}}</p>
+      </div>
+      <div class="col-2">
+        <span class="temperature">{{weatherItem.main.temp}}° F</span>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,65 @@
+<div class="title">
+  <h2>{{weatherDetailItem?.city.name}}</h2>
+</div>
+<div>
+  <button class="backButton" (click)="goBack()">Back</button>
+</div>
+<div class="map-box google-maps">
+  <h2>GOOGLE MAP</h2>
+    <iframe
+      width="600"
+      height="450"
+      frameborder="0" style="border:0"
+      [src]="trustedMapUrl">
+    </iframe>
+</div>
+<div>
+  <h2 class="title">5 Day Forecast</h2>
+  <ul class="weatherDetailItems">
+    <li class="box">
+      <div class="col-1">
+        <h3>{{weatherDetailItem?.list[0].dt_txt | date:'EEE'}}</h3>
+        <p class="info">{{weatherDetailItem?.list[0].weather[0].description}}</p>
+      </div>
+      <div class="col-2">
+        <span class="temperature">{{weatherDetailItem?.list[0].main.temp}}° F</span>
+      </div>
+    </li>
+    <li class="box">
+      <div class="col-1">
+        <h3>{{weatherDetailItem?.list[5].dt_txt | date:'EEE'}}</h3>
+        <p class="info">{{weatherDetailItem?.list[5].weather[0].description}}</p>
+      </div>
+      <div class="col-2">
+        <span class="temperature">{{weatherDetailItem?.list[5].main.temp}}° F</span>
+      </div>
+    </li>
+    <li class="box">
+      <div class="col-1">
+        <h3>{{weatherDetailItem?.list[13].dt_txt | date:'EEE'}}</h3>
+        <p class="info">{{weatherDetailItem?.list[13].weather[0].description}}</p>
+      </div>
+      <div class="col-2">
+        <span class="temperature">{{weatherDetailItem?.list[13].main.temp}}° F</span>
+      </div>
+    </li>
+    <li class="box">
+      <div class="col-1">
+        <h3>{{weatherDetailItem?.list[21].dt_txt | date:'EEE'}}</h3>
+        <p class="info">{{weatherDetailItem?.list[21].weather[0].description}}</p>
+      </div>
+      <div class="col-2">
+        <span class="temperature">{{weatherDetailItem?.list[21].main.temp}}° F</span>
+      </div>
+    </li>
+    <li class="box">
+      <div class="col-1">
+        <h3>{{weatherDetailItem?.list[29].dt_txt | date:'EEE'}}</h3>
+        <p class="info">{{weatherDetailItem?.list[29].weather[0].description}}</p>
+      </div>
+      <div class="col-2">
+        <span class="temperature">{{weatherDetailItem?.list[29].main.temp}}° F</span>
+      </div>
+    </li>
+  </ul>
+</div>
